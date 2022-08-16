@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+    <title> To-do App</title>
+</head>
+<body>
+    
+    
+    <div id="main">
+              
+    <div class="container">
+		<h2> My To-do List</h2>
+    
+		<form name="toDo">
+			<input type="text" name="List"/>
+		</form>
+    
+		<button id="button" style="border-radius:5px; background-color: grey ;">
+            Add
+        </button>
+		<br/>
+		<ul></ul>
+        
+        
+    </div>
+
+<!-- Create a todoapp with three functions;Add, Delete and Clear -->
+<script>
+    // To add to the empty list
+    //1. Get the value of the input element
+    //2. append it to the list
+    //3.display it to the screen in an unordered list
+  
+// Methods to be used for (1) above; ready(), click(),keyup()
+//Some methods you could use for (2) and (3;  dbclick(),focus(),fadeOut,etc
+  
+  
+ // Assignment: Finish up the App with CSS and the necessary functions to delete task item and clear all items
+  //Upload to Netlify and send the link to me via whatsapp on br before 6pm Thursday (05/05/22)
+
+
+
+$ (document).ready(
+    function () {
+        $('button').click(
+
+        
+        function  () {
+            var newLi = $("input[name=List]").val();
+            $('ul').append('<li>' + newLi +'</li>');
+
+        })
+
+
+        $("input[name=List]").keyup(
+            function myTasks() {
+            if (myTasks.keyCode == 13) {
+                $('button').click();
+            }
+                
+            }
+        )
+    }
+)
+
+
+
+
+</script>
+</body>
+</html>
